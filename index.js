@@ -9,8 +9,11 @@ app.get('/', (req, res) => {
   res.redirect('/hello-world');
 });
 
-app.get('/hello-world', (req, res) => {
-  res.redirect('/hello-world.json');
+app.get("/hello-word.json", (req, res) => {
+  res.json({
+    success: true,
+    data: "hello"
+  });
 });
 
 app.use((req, res) => {
